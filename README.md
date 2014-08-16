@@ -21,4 +21,3 @@ System requirements: psrcat, to be present in the path; a modern web browser suc
 Setup instructions: Run psrcat2js.py to generate the JavaScript variables from psrcat. Open a browser window and open populus.htm.
 
 Created by Jayanth Chennamangalam  
-[http://jayanthc.github.io/yapp/](http://jayanthc.github.io/yapp/)
