@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="author" content="Jayanth Chennamangalam" />
+    <meta name="description" content="Populus: The pulsar population visualizer" />
+    <link rel="stylesheet" type="text/css" href="populus.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Artifika" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Titillium+Web" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.26.0/math.min.js"></script>
+    <script type="text/javascript" src="psrcat.js"></script>
+    <script type="text/javascript" src="populus.js"></script>
+    <title>Populus</title>
+  </head>
+
+  <body onLoad="plot()">
+    <header>
+      <img src="poplar.png" alt="Populus" />
+      <span id="title">Populus</span><br />
+      <span id="subTitle">the pulsar population visualizer</span>
+    </header>
+    <article>
+      <section id="tooltip">&nbsp;</section>
+      <section id="chart"></section> <!-- no spaces, line breaks, etc. for
+                                          empty() -->
+      <section id="params">
+      <span class="secTitle">Parameters</span><br />
+        <input type="checkbox" name="pmra" value="pmra">
+          <a href="#" onClick="showHelp(this)">pmra</a><br />
+        <input type="checkbox" name="pmdec" value="pmdec">
+          <a href="#" onClick="showHelp(this)">pmdec</a><br />
+        <input type="checkbox" name="rajd" value="rajd">
+          <a href="#" onClick="showHelp(this)">rajd</a><br />
+        <input type="checkbox" name="decjd" value="decjd">
+          <a href="#" onClick="showHelp(this)">decjd</a><br />
+        <input type="checkbox" name="gl" value="gl">
+          <a href="#" onClick="showHelp(this)">gl</a><br />
+        <input type="checkbox" name="gb" value="gb">
+          <a href="#" onClick="showHelp(this)">gb</a><br />
+        <input type="checkbox" name="pml" value="pml">
+          <a href="#" onClick="showHelp(this)">pml</a><br />
+        <input type="checkbox" name="pmb" value="pmb">
+          <a href="#" onClick="showHelp(this)">pmb</a><br />
+        <input type="checkbox" name="dm" value="dm">
+          <a href="#" onClick="showHelp(this)">dm</a><br />
+        <input type="checkbox" name="p0" value="p0" checked>
+          <a href="#" onClick="showHelp(this)">p0</a><br />
+        <input type="checkbox" name="p1" value="p1" checked>
+          <a href="#" onClick="showHelp(this)">p1</a><br />
+        <input type="checkbox" name="s400" value="s400">
+          <a href="#" onClick="showHelp(this)">s400</a><br />
+        <input type="checkbox" name="s1400" value="s1400">
+          <a href="#" onClick="showHelp(this)">s1400</a><br />
+        <input type="checkbox" name="w50" value="w50">
+          <a href="#" onClick="showHelp(this)">w50</a><br />
+        <input type="checkbox" name="w10" value="w10">
+          <a href="#" onClick="showHelp(this)">w10</a><br />
+        <input type="checkbox" name="spindx" value="spindx">
+          <a href="#" onClick="showHelp(this)">spindx</a><br />
+        <input type="checkbox" name="rm" value="rm">
+          <a href="#" onClick="showHelp(this)">rm</a><br />
+        <input type="checkbox" name="tau_sc" value="tau_sc">
+          <a href="#" onClick="showHelp(this)">tau_sc</a><br />
+        <input type="checkbox" name="dm1" value="dm1">
+          <a href="#" onClick="showHelp(this)">dm1</a><br />
+        <input type="checkbox" name="pb" value="pb">
+          <a href="#" onClick="showHelp(this)">pb</a><br />
+        <input type="checkbox" name="dist" value="dist">
+          <a href="#" onClick="showHelp(this)">dist</a><br />
+        <input type="checkbox" name="dist1" value="dist1">
+          <a href="#" onClick="showHelp(this)">dist1</a><br />
+        <input type="checkbox" name="age" value="age">
+          <a href="#" onClick="showHelp(this)">age</a><br />
+        <button id="plot" onClick="plot()">Plot</button>
+      </section>
+      <section id="plotOptions">
+        <span class="secTitle">Plot Options</span><br />
+        <a href="#" onClick="showHelp(this)">log(x)</a>
+          <input type="checkbox" name="log10x" value="log10x" id="log10x"
+          checked><br />
+        <a href="#" onClick="showHelp(this)">log(y)</a>
+          <input type="checkbox" name="log10y" value="log10y" id="log10y"
+          checked><br />
+        <a href="#" onClick="showHelp(this)">All</a>
+          <input type="radio" name="scope" value="useAll" checked><br />
+        <a href="#" onClick="showHelp(this)">Selected</a>
+          <input type="radio" name="scope" value="useSel">
+      </section>
+    </article>
+    <footer>
+      <section id="status">Loading...<sup>&nbsp;</sup><br />&nbsp;</section>
+    </footer>
+    <div class="buttons">
+      <a href="#" onClick="showHelpPage()">help</a>&nbsp;
+      <a href="#" onClick="showAboutPage()">about</a>
+    </div>
+  </body>
+</html>
+
