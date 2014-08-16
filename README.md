@@ -16,7 +16,7 @@ To see what each parameter or plot option is, click on the checkbox or
 radio button label. The explanation is displayed on the status bar at the
 bottom of the page.
 
-System requirements: psrcat, to be present in the path; a modern web browser such as Google Chrome.
+System requirements: psrcat, to be present in the path; a modern web browser such as Google Chrome; an Internet connection (to load jQuery, Highcharts, and math.js from CDNs).
 
 Setup instructions: Run psrcat2js.py to generate the JavaScript variables from psrcat. Open a browser window and open populus.htm.
 
