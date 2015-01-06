@@ -2,7 +2,7 @@
 ## README
 
 Populus is a visualizing front-end for the [ATNF Pulsar
-Catalogue](http://www.atnf.csiro.au/people/pulsar/psrcat/). It displays scatter plots for any combination of supported pulsar parameters for which data are available.
+Catalogue](http://www.atnf.csiro.au/people/pulsar/psrcat/). It can be used to view scatter plots for any combination of supported pulsar parameters for which data are available. It can also be used to view histograms.
 
 To create a scatter plot, choose two parameters from the 'Parameters' section of the page, and click the 'Plot' button. Hovering the mouse pointer on a plotted point shows the name of the pulsar and the x and y axis values for that pulsar, above the plot. To zoom into a particular region, click and drag around the region of interest. To select pulsars, either control-click on the pulsars that you want to choose, or control-click-and-drag an area around them (in the case of Macs, use command-click or command-click-and-drag instead). To plot all pulsars in the catalogue for which values of both parameters are available, select the 'All' radio button (this is the default option). To create a scatter plot of only the selected pulsars, click the 'Selected' radio button, choose parameters, and click 'Plot'.
 

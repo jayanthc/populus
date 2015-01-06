@@ -105,6 +105,7 @@ var optionsScatter = {
             color: "#006600"
         },
         series: {
+            name: "Data",
             point: {
                 events: {
                     mouseOver: function() {
@@ -162,6 +163,7 @@ var optionsHistogram = {
     },
     plotOptions: {
         column: {
+            name: "Data",
             color: "#006600", 
             pointPadding: 0,
             groupPadding: 0,
@@ -495,8 +497,9 @@ function showHelpPage() {
             helpText =
 "<p>Populus is a visualizing front-end for the \
 <a href=\"http://www.atnf.csiro.au/people/pulsar/psrcat/\">ATNF Pulsar \
-Catalogue</a>. It displays scatter plots for any combination of supported \
-pulsar parameters for which data are available.</p>\
+Catalogue</a>. It can be used to view scatter plots for any combination of \
+supported pulsar parameters for which data are available. It can also be used \
+to view histograms.</p>\
 \
 <p>To create a scatter plot, choose two parameters from the 'Parameters' \
 section of the page, and click the 'Plot' button. Hovering the mouse pointer \
@@ -537,7 +540,8 @@ function showAboutPage() {
             /* animation complete, so show help */
             aboutText =
 "<p>Populus uses version " + psrcatVersion
-+ " of the ATNF Pulsar Catalogue, with " + nPulsars + " pulsars.</p>\
++ " of the <a href=\"http://www.atnf.csiro.au/people/pulsar/psrcat/\">ATNF "
++ "Pulsar Catalogue</a>, with " + nPulsars + " pulsars.</p>\
 \
 <p>Created by Jayanth Chennamangalam.</p>\
 \
